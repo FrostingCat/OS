@@ -1,0 +1,7 @@
+all: TCPEchoGetter TCPEchoServer TCPEchoSender
+TCPEchoGetter: TCPEchoGetter.c DieWithError.c
+	gcc TCPEchoGetter.c DieWithError.c -o get
+TCPEchoServer: TCPEchoServer.c DieWithError.c
+	gcc TCPEchoServer.c DieWithError.c HandleTCPClient.c -o serve
+TCPEchoSender: TCPEchoSender.c DieWithError.c
+	gcc TCPEchoSender.c DieWithError.c -o send
