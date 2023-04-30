@@ -1,0 +1,5 @@
+all: receiver sender
+receiver: receiver.c DieWithError.c
+	gcc receiver.c DieWithError.c -o r
+sender: sender.c DieWithError.c
+	gcc sender.c DieWithError.c -o s
